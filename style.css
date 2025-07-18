@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("/images/background.png");
+    background-position: center;
+    background-size: cover;
+    padding: 0 7%;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+nav {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    cursor: pointer;
+}
+
+nav ul {
+    flex: 1;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .btn {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px 30px;
+    border-radius: 25px;
+}
+
+.content {
+    margin-top: 12%;
+}
+
+.content h1 {
+    font-size: 88px;
+    margin-bottom: 15px;
+}
+
+.content h1 span {
+    color: #ff960b;
+}
+
+.content p {
+    line-height: 22px;
+    font-size: 14px;
+}
+
+.content .btn {
+    display: inline-block;
+    margin-top: 30px;
+    background: #ff960b;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+
+.coinlist {
+    position: absolute;
+    right: 10%;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.coin {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 0 15px;
+    color: #ff960b;
+    border: 1px solid white;
+    padding: 20px 30px;
+    border-radius: 8px;
+}
+
+.coin img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.coin h3 {
+    color: white;
+    margin-bottom: 5px;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 5%;
+    }
+    
+    .content {
+        margin-top: 10%;
+    }
+    
+    .coinlist {
+        right: 5%;
+        bottom: 30px;
+    }
+    
+    .coin {
+        padding: 15px 20px;
+        min-width: 180px;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 4%;
+    }
+    
+    nav {
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        margin: 20px 0;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .logo {
+        align-self: flex-start;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    nav ul li {
+        margin: 5px 10px;
+    }
+    
+    nav ul li a {
+        font-size: 16px;
+        padding: 8px 12px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+        background: rgba(255, 150, 11, 0.2);
+    }
+    
+    nav .btn {
+        padding: 12px 25px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+    
+    nav .btn:hover {
+        background: #ff960b;
+        border-color: #ff960b;
+    }
+    
+    .content {
+        margin-top: 8%;
+        text-align: center;
+    }
+    
+    .content h1 {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        margin-bottom: 20px;
+    }
+    
+    .content p {
+        font-size: 16px;
+        max-width: 90%;
+        margin: 0 auto 20px;
+    }
+    
+    .coinlist {
+        position: static;
+        margin-top: 40px;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .coin {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        min-width: 160px;
+    }
+    
+    .coin:hover {
+        background: rgba(255, 150, 11, 0.2);
+        transform: translateY(-3px);
+    }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 3%;
+    }
+    
+    nav {
+        margin: 15px 0;
+        padding: 15px;
+    }
+    
+    nav ul li a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    
+    nav .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .content {
+        margin-top: 10%;
+    }
+    
+    .content h1 {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+    }
+    
+    .content p {
+        font-size: 14px;
+    }
+    
+    .coinlist {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .coin {
+        width: 100%;
+        max-width: 250px;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .coin img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Very Small Mobile Styles */
+@media screen and (max-width: 320px) {
+    .container {
+        padding: 0 2%;
+    }
+    
+    nav {
+        padding: 12px;
+        margin: 10px 0;
+    }
+    
+    .logo {
+        width: 40px;
+    }
+    
+    nav ul li {
+        margin: 3px 6px;
+    }
+    
+    nav ul li a {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+    
+    nav .btn {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+    
+    .content {
+        margin-top: 8%;
+    }
+    
+    .content h1 {
+        font-size: clamp(1.8rem, 12vw, 3rem);
+    }
+    
+    .content p {
+        font-size: 13px;
+    }
+    
+    .content .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .coin {
+        padding: 12px;
+        font-size: 12px;
+    }
+    
+    .coin h3 {
+        font-size: 14px;
+    }
+    
+    .coin img {
+        width: 30px;
+    }
+}
